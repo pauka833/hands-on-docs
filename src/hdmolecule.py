@@ -31,7 +31,6 @@ It also provides a couple of example functions to show how to use this class.
 from ase import Atoms
 from ase.calculators.emt import EMT
 
-
 class HDMolecule:
     """A HDMolecule represents a homonuclear diatomic molecule, i.e., a
     linear molecule that consists of two atoms of the same element.
@@ -46,7 +45,8 @@ class HDMolecule:
     def __init__(self, element_symbol, distance):
         """Create a HDMolecule
 
-        Args:
+        Args:clear
+
             element_symbol (string): The chemical element symbol for the element
                 that the molecule consists of.
             distance (float): The distance between the two atoms.
@@ -96,6 +96,13 @@ class HDMolecule:
 
 
 def analyze_N2(distance):
+    """Print out an energy analysis for an N2 molecule for different
+    bond lengths.
+
+        Args:
+            distance (float): the bond length between the two atoms
+            in an N2 molecule.
+    """
 
     N2 = HDMolecule("N", distance)
 
